@@ -1,0 +1,55 @@
+@use '@/styles/utils' as *;
+
+.footer {
+  height: rem(100px);
+  border-top: 1px solid #dee3eb;
+  background-color: #f8fbfe;
+
+  .footer__inner {
+    @include font-size('12');
+    @include font-weight('medium');
+    @include gap(20px);
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    margin: 0 auto;
+    padding: $common-padding;
+  }
+
+  .footer__logo {
+    width: rem(80px);
+    height: rem(60px);
+    // background-image: url('#{$img-path}/common/logo-fnb.png');
+  }
+
+  .footer__link-list {
+    @include gap(20px);
+
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(8px);
+  }
+
+  .footer__link-text {
+    color: $text-title;
+  }
+
+  .footer__address,
+  .footer__copyright {
+    color: $text-light;
+  }
+}
+
+/* -------------------------
+// breakpoint 
+// ---------------------- */
+@media screen and (max-width: rem(1860px)) {
+  .footer {
+    .footer__inner {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": true,
+    "noImplicitThis": false,
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "types": [
+      "nuxt",
+      "vuetify",
+      "@types/node",
+      "@storybook/vue3",
+      "vue/jsx-runtime",
+      "d3",
+      "dayjs",
+      "lodash"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "~/*": ["./*"]
+    }
+  }
+}

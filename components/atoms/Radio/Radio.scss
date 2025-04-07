@@ -1,0 +1,7 @@
+.radio-group {
+  &.radio-group--horizontal {
+    :deep(.v-selection-control-group) {
+      flex-direction: row;
+    }
+  }
+}

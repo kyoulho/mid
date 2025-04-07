@@ -1,0 +1,18 @@
+@use '@/styles/utils' as *;
+
+.dropdown {
+  .v-list {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+    .v-list-item--density-compact {
+      min-height: rem(32px);
+    }
+
+    .v-list-item-title {
+      @include font-size('14');
+    }
+  }
+
+  :deep(.v-overlay__content) {
+    transform: translateY(rem(6px));
+  }
+}

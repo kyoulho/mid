@@ -1,0 +1,12 @@
+@use '@/styles/utils' as *;
+
+.table-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24px);
+  align-items: center;
+
+  > div {
+    width: 100%;
+  }
+}

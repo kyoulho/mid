@@ -1,0 +1,14 @@
+@function transparent-hex($hex, $opacity) {
+  $a: round($opacity * 255);
+  @return $hex + format('%02X', $a);
+}
+
+@function theme-color($key, $opacity) {
+  @return transparent-hex(var($key), $opacity);
+}
+
+@mixin theme-map($map: ()) {
+  @each $key, $value in $map {
+    --#{$key}: #{$value};
+  }
+}

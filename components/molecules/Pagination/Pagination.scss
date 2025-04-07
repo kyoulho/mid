@@ -1,0 +1,46 @@
+@use '@/styles/utils' as *;
+
+.pagination {
+  .pagination__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .pagination__item {
+      margin: 0 rem(4px);
+    }
+
+    .pagination__first,
+    .pagination__last {
+      margin: 0 rem(3px);
+    }
+
+    .svg-icon {
+      width: rem(20px);
+      height: rem(20px);
+    }
+  }
+
+  .pagination__first,
+  .pagination__prev,
+  .pagination__item,
+  .pagination__next,
+  .pagination__last {
+    .v-btn {
+      --v-btn-size: 16px;
+
+      min-width: rem(32px);
+      width: rem(32px);
+      height: rem(32px);
+      padding: rem(4px);
+
+      &.v-btn--variant-text {
+        --v-theme-primary: 96, 104, 122; // #60687a;
+
+        &:hover {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

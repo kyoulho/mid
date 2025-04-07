@@ -1,0 +1,7 @@
+@use '@/styles/utils' as *;
+
+.detail-list {
+  display: flex;
+  flex-direction: column;
+  // gap: rem(12px);
+}

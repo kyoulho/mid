@@ -1,0 +1,21 @@
+@use '@/styles/utils' as *;
+
+.upsert-popup {
+  .v-card {
+    overflow-y: hidden;
+
+    .v-card-title {
+      padding: rem(16px) rem(20px);
+      border-bottom: 1px solid $border-light;
+    }
+
+    .v-card-text {
+      overflow-y: auto;
+    }
+
+    .v-card-actions {
+      padding: rem(16px) rem(20px);
+      border-top: 1px solid $border-light;
+    }
+  }
+}

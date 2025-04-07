@@ -1,0 +1,9 @@
+@use '@/styles/utils' as *;
+
+.link {
+  color: $primary;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

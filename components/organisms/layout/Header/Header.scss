@@ -1,0 +1,31 @@
+@use '@/styles/utils' as *;
+
+.header {
+  @include font-size('14');
+
+  height: rem(61px);
+  border-bottom: 1px solid $border-light;
+  background-color: #fff;
+
+  .header__inner {
+    height: 100%;
+    padding: 0 rem(20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__interface {
+    display: flex;
+    align-items: center;
+    gap: rem(8px);
+
+    .dropdown__button {
+      em {
+        font-weight: 400;
+        color: $dark-text;
+        margin-left: rem(4px);
+      }
+    }
+  }
+}

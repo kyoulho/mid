@@ -1,0 +1,56 @@
+@use '@/styles/utils' as *;
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  height: rem(44px);
+
+  .breadcrumb__list {
+    display: flex;
+    flex: 1;
+    margin: auto;
+
+    color: $light-text;
+    font-weight: 500;
+
+    .breadcrumb__link--active {
+      color: $dark-text;
+    }
+  }
+
+  .breadcrumb__item {
+    @include font-size('14');
+
+    display: flex;
+    align-items: center;
+    padding: 0;
+    cursor: default;
+
+    > * {
+      vertical-align: middle;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 0;
+      height: rem(12px);
+      margin: 0 rem(16px);
+      border-right: 1px solid rgba(1, 1, 1, 0.2);
+      transform: rotate(30deg);
+    }
+
+    &:first-child::before {
+      content: none;
+    }
+  }
+
+  .breadcrumb__link {
+    display: flex;
+    align-items: center;
+
+    .svg-icon {
+      @include svg-icon-size(18px);
+    }
+  }
+}

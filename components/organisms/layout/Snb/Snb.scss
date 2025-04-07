@@ -1,0 +1,83 @@
+@use '@/styles/utils' as *;
+
+.snb {
+  .snb__title {
+    height: rem(60px);
+    margin-bottom: 0;
+
+    :deep(.v-list-item-title) {
+      font-size: rem(18px);
+      font-weight: 700;
+    }
+
+    :deep(.v-list-item__overlay) {
+      opacity: 0;
+    }
+
+    .v-btn--icon {
+      width: rem(24px);
+      height: rem(24px);
+    }
+  }
+
+  .v-navigation-drawer {
+    position: unset !important;
+    border-right: 1px solid $border-light;
+
+    &:not(.v-navigation-drawer--rail) {
+      min-width: 256px;
+    }
+
+    .v-list {
+      padding: 0;
+    }
+
+    :not(.snb__title).v-list-item {
+      margin-bottom: rem(4px);
+    }
+
+    :deep(.v-list-item-title) {
+      @include font-size('14');
+      color: $dark-text;
+    }
+
+    :not(.snb__title).v-list-item--active {
+      &:not(.v-list-group__header) {
+        border-right: 2px solid rgb(var(--v-theme-primary));
+      }
+      :deep(.v-list-item-title) {
+        color: $primary;
+        font-weight: 500;
+      }
+      :deep(.v-list-item__prepend) {
+        .mdi {
+          color: $primary !important;
+        }
+      }
+    }
+
+    .v-divider {
+      display: none;
+    }
+
+    .v-icon {
+      opacity: 1;
+    }
+  }
+
+  :deep(.v-list-item__prepend) {
+    width: rem(24px);
+    margin-right: rem(12px);
+  }
+
+  :deep(.v-list-item__append) {
+    .mdi {
+      font-size: rem(21px);
+    }
+  }
+}
+
+.svg-icon {
+  width: rem(24px);
+  height: rem(24px);
+}
